@@ -3,15 +3,16 @@ import random
 
 class Insect:
 
-    def __init__(self):
-        wings = 2
-        legs = 4
+    def __init__(self,n,w,l):
+        self.name = n
+        self.wing = w
+        self.legs = l
+        self.flight = 0
 
-    def flight(self):
-        for randint in range(0, 11):
-            self.flight_time = randint
+    def flight_length(self):
+        self.flight = random.randint(1,10)
 
-    def get_flighttime(self):
-        return self.flight_time
+    def get_miles(self):
+        return self.flight
         # return self.wings
         # return self.legs
